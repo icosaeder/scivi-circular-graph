@@ -1049,7 +1049,7 @@ var SciViGraph;
             if (r1 && r2)
                 this.render(true);
         };
-        Renderer.m_maxTextLength = 120.0;
+        Renderer.m_maxTextLength = 100.0;
         return Renderer;
     }());
     SciViGraph.Renderer = Renderer;
