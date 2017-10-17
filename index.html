@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>SciVi Circular Graph Example</title>
+        
+        <script src="lib/pixi.js"></script>
+        <script src="lib/jquery.js"></script>
+        <script src="lib/jquery-ui.js"></script>
+        <link rel="stylesheet" href="lib/jquery-ui.css"/>
+
+        <script src="data.js"></script>
+        <script src="colors.js"></script>
+        <script src="bundle.js"></script>
+    </head>
+
+    <style>
+        body, canvas {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        html {
+            overflow: hidden;
+            height: 100%;
+        }
+
+        body {
+            height: 100%;
+            overflow: auto;
+        }
+
+        #ctr {
+            position: absolute;
+            overflow: hidden;
+            border-right: 3px double black;
+        }
+    </style>
+
+    <body onload="start($('#ctr')[0], g_data, g_colors);">
+        <div id="ctr"></div>
+    </body>
+</html>
