@@ -989,10 +989,10 @@ var SciViGraph;
                 this.m_renderer.render(this.m_stage);
         };
         Renderer.prototype.reshape = function () {
-            this.layout();
+            /*this.layout();
             this.m_stage.position.set(this.m_container.clientWidth / 2.0, this.m_container.clientHeight / 2.0);
             this.m_renderer.resize(this.m_container.clientWidth, this.m_container.clientHeight);
-            this.render(true);
+            this.render(true);*/
         };
         Renderer.prototype.changeActiveGroupColor = function (newColor) {
             if (this.m_selectedNode) {
