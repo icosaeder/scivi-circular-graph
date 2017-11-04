@@ -922,7 +922,7 @@ var SciViGraph;
             this.m_radius = (this.m_nodes.length * SciViGraph.Node.spacingNeeded()) / (2.0 * Math.PI);
             var s = radius / (this.m_radius + Renderer.m_maxTextLength);
             this.m_stage.scale.set(s, s);
-            this.m_nodes.sort(function (x1, x2) { return ~~(x1.nmb > x2.nmb); });
+            this.m_nodes.sort(function (x1, x2) { return x1.nmb - x2.nmb; });
             console.log("Number of nodes: " + this.m_nodes.length);
             this.m_nodes.forEach(function (node, i) {
                 if (node.visible) {
