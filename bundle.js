@@ -837,7 +837,7 @@ var SciViGraph;
         Renderer.prototype.initInterface = function () {
             var _this = this;
             window.addEventListener("resize", function () { _this.reshape(); });
-            var onWheel = function (e) {
+            var onWheel = null; /* function (e) {
                 e = e || window.event;
                 var delta = e.deltaY || e.detail || e.wheelDelta;
                 if (delta != undefined) {
@@ -850,10 +850,10 @@ var SciViGraph;
                     _this.m_stage.scale.set(s, s);
                     _this.m_renderer.render(_this.m_stage);
                 }
-            };
+            };*/
             var onMouseMove = function (e) {
                 e = e || window.event;
-                if (_this.m_mousePressed) {
+                /*if (_this.m_mousePressed) {
                     var dx = e.clientX - _this.m_panPrevX;
                     var dy = e.clientY - _this.m_panPrevY;
                     var r = _this.m_radius / 2.0;
@@ -871,7 +871,7 @@ var SciViGraph;
                     _this.render(true);
                     _this.m_panning = true;
                 }
-                else {
+                else*/ {
                     _this.m_hoveredNode = _this.getNodeByPosition(e.clientX, e.clientY);
                     _this.render(false);
                 }
